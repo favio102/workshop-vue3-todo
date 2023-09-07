@@ -1,0 +1,24 @@
+html {
+  background: rgba(#35495e,0.03);
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, button, input, textarea {
+  font-family: Poppins, Helvetica, Arial, sans-serif;
+}
+
+h3, p, input, textarea {
+  margin: 0;
+}
+
+input, textarea {
+  border: none;
+  background: none;
+  &:focus {
+    outline: none;
+    background-color: rgba(#41B883, 0.1);
+  }
+}
