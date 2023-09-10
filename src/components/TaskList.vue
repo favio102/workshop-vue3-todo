@@ -24,13 +24,20 @@
     function addTask(title, description) {
       tasks.unshift({ title, description });
     }
+    function resetForm() {
+      newTitle.value = ""
+      newDescription.value = ""
+      // hide the form
+      showNewTaskForm.value = false
+    }
     const newTitle = ref("")
     const newDescription = ref("")
+    const showNewTaskForm = ref(false)
 </script>
 
 <template>
-  <button class="btn round-icon" @click="addTask(newTitle, newDescription)">＋</button>
-  <div class="task-card new-task" v-on:keyup.enter="addTask(newTitle, newDescription)">
+  <button class="btn round-icon" @click="showNewTaskForm = !showNewTaskForm">＋</button>
+  <div v-show="showNewTaskForm" class="task-card new-task" v-on:keyup.enter="addTask(newTitle, newDescription), resetForm()">
     <div>
       <input type="text" placeholder="What would you like to do?" v-model="newTitle"/>
       <textarea placeholder="Add some details about your task..." v-model="newDescription"></textarea>
