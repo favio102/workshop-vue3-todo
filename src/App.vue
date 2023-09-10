@@ -1,7 +1,5 @@
 <script setup>
-import Github from '@/components/icons/GitHub.vue';
-import Linkedin from '@/components/icons/LinkedIn.vue';
-import TaskList from '@/components/TaskList.vue';
+  import TaskList from '@/components/TaskList.vue';
 </script>
 
 <template>
@@ -11,22 +9,9 @@ import TaskList from '@/components/TaskList.vue';
   </header>
 
   <main>
-    <div style="display: flex; height: 40vh; justify-content: center; align-items: center; font-size: 2.5em;">
       <TaskList />
-    </div>
   </main>
 
-  <footer>
-    <p>Workshop by Trouni Tiet</p>
-    <div class="logos">
-      <a href="https://www.linkedin.com/in/trouni" target="_blank">
-        <Linkedin />
-      </a>
-      <a href="https://www.github.com/trouni" target="_blank">
-        <Github />
-      </a>
-    </div>
-  </footer>
 </template>
 
 

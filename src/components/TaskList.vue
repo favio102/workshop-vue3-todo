@@ -1,13 +1,31 @@
-<template>
-  <div>
-    <h3>Learn to use VUE.js</h3>
-    <p>Complete this todo list app</p>
-  </div>
-</template>
+<script setup>
+  import TaskCard from "@/components/TaskCard.vue";
+  import { reactive } from "vue";
 
-<style>
-h3 {
-  color: yellow;
-  margin: 2em;
-}
-</style>
+  const tasks = reactive([
+    {
+      title: "Create a card component",
+      description:
+        "Create a new TaskCard.vue file in the components folder, then import it in TasksList",
+      done: true,
+    },
+    {
+      title: "Make the card component dynamic",
+      description:
+        "Learn about using the data option and passing data to child components using props",
+      done: true,
+    },
+    {
+      title: "Bind the attributes to the data",
+      description:
+        "Use the v-bind directive to bind the title and description to our data",
+      done: false,
+    }
+  ])
+</script>
+
+<template>
+  <TaskCard
+    v-for="(task, index) in tasks"
+  v-bind:title="task.title" :description="task.description" :done="task.done" />
+</template>
