@@ -18,7 +18,7 @@
 <style lang="scss" scoped>
 header {
   text-align: center;
-  color: #2c3e50;
+  color: #5b91c6;
   margin: auto;
   margin-top: 60px;
   min-height: 20vh;
@@ -26,7 +26,7 @@ header {
 
 main {
   text-align: center;
-  color: #2c3e50;
+  color: #7295b7;
   margin: auto;
   padding: 3em 0 3em 0;
   max-width: 600px;
